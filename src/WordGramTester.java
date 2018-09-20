@@ -21,25 +21,25 @@ public class WordGramTester {
 	@Test
 	public void testHashEquals(){
 		assertEquals("hash fail on equals 0,3",myGrams[0].hashCode(),myGrams[3].hashCode());
-		assertEquals("hash fail on equals 0,3",myGrams[0].hashCode(),myGrams[6].hashCode());
-		assertEquals("hash fail on equals 0,3",myGrams[1].hashCode(),myGrams[4].hashCode());
-		assertEquals("hash fail on equals 0,3",myGrams[2].hashCode(),myGrams[8].hashCode());
-		assertEquals("hash fail on equals 0,3",myGrams[2].hashCode(),myGrams[5].hashCode());
+		assertEquals("hash fail on equals 0,6",myGrams[0].hashCode(),myGrams[6].hashCode());
+		assertEquals("hash fail on equals 1,4",myGrams[1].hashCode(),myGrams[4].hashCode());
+		assertEquals("hash fail on equals 2,8",myGrams[2].hashCode(),myGrams[8].hashCode());
+		assertEquals("hash fail on equals 2,5",myGrams[2].hashCode(),myGrams[5].hashCode());
 	}
 
 	@Test
 	public void testEquals(){
 
-		assertEquals("eq fail on 0,3",myGrams[0].equals(myGrams[3]),true);
-		assertEquals("eq fail on 0,6",myGrams[0].equals(myGrams[6]),true);
-		assertEquals("eq fail on 1,4",myGrams[1].equals(myGrams[4]),true);
-		assertEquals("eq fail on 2,5",myGrams[2].equals(myGrams[5]),true);
-		assertEquals("eq fail on 2,8",myGrams[2].equals(myGrams[8]),true);
-		assertEquals("eq fail on 0,2",myGrams[0].equals(myGrams[2]),false);
-		assertEquals("eq fail on 0,4",myGrams[0].equals(myGrams[2]),false);
-		assertEquals("eq fail on 2,3",myGrams[2].equals(myGrams[3]),false);
-		assertEquals("eq fail no 2,6",myGrams[2].equals(myGrams[6]),false);
-		assertEquals("eq fail no 7,8",myGrams[7].equals(myGrams[8]),false);
+		assertTrue("eq fail on 0,3",myGrams[0].equals(myGrams[3]));
+		assertTrue("eq fail on 0,6",myGrams[0].equals(myGrams[6]));
+		assertTrue("eq fail on 1,4",myGrams[1].equals(myGrams[4]));
+		assertTrue("eq fail on 2,5",myGrams[2].equals(myGrams[5]));
+		assertTrue("eq fail on 2,8",myGrams[2].equals(myGrams[8]));
+		assertFalse("eq fail on 0,2",myGrams[0].equals(myGrams[2]));
+		assertFalse("eq fail on 0,4",myGrams[0].equals(myGrams[2]));
+		assertFalse("eq fail on 2,3",myGrams[2].equals(myGrams[3]));
+		assertFalse("eq fail no 2,6",myGrams[2].equals(myGrams[6]));
+		assertFalse("eq fail no 7,8",myGrams[7].equals(myGrams[8]));
 	}
 
 	@Test
