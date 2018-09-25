@@ -14,7 +14,10 @@ public class WordGram {
 	private int myHash;         // cached hash value
 
 	/**
-	 * Create WordGram (add comments)
+	 * Create WordGram, serve as a constructor 
+	 * Assign the value in source to instance variable myWords of size from start
+	 * Set the initial value of myToString to null
+	 * Set the initial myHash to zero 
 	 * @param source
 	 * @param start
 	 * @param size
@@ -85,7 +88,7 @@ public class WordGram {
 	
 
 	/**
-	 * Create and complete this comment
+	 * This method is used to make a left shift of the wordGram and append a new word in the tail 
 	 * @param last is last String of returned WordGram
 	 * @return
 	 */

@@ -30,11 +30,26 @@ Answer these questions:
 
 (1) Why the results of these methods should be the same in 
 terms of changes made to the HashSet parameter.
+Answer: Because benchmark reads the adjacent words in these files and benchmarkShift reads the first word in the file and repeatedly call .shift() method which is exactly the next adjacent word in the file, so the output is the same.
 
 (2) What are the conceptual differences between the two
 benchmarking methods
+Answer: benchmark method read in the whole data at once and do a linear grabbing on the sequence of data, while benchmarkShift method read one word from the file each time and save the word to the set.
 
 (3) Is the total amount of memory allocated for arrays
 the same or different in the two methods? Account for
 arrays created in the methods and arrays created by
 WordGram objects. Try to be quantitative in answering.
+Answer: Suppose the length of the words in files is k, 
+For benchmark method, 
+We need a k space arraylist and a k space string array.
+K- wsize + 1 wordgram objects of size wsize. (Each wordgram object contains an array of size wsize)
+
+For benchmarkShift method,
+We need a wsize space string array 
+One wordgram object of size wsize (contains an array of size wsize)
+
+
+So based on the result, the memory allocated for benchmarkShift method is much less than that of benchmark method.
+
+
