@@ -47,9 +47,9 @@ K- wsize + 1 wordgram objects of size wsize. (Each wordgram object contains an a
 
 For benchmarkShift method,
 We need a wsize space string array 
-One wordgram object of size wsize (contains an array of size wsize)
+Since each time .shiftadd is called, we create a new wordgram object, we need k - wsize + 1 wordgram objects of size wsize (Each wordgram object contains an array of size wsize).
 
 
-So based on the result, the memory allocated for benchmarkShift method is much less than that of benchmark method.
+So based on the result, the memory allocated for benchmarkShift method is less than that of benchmark method.
 
 
